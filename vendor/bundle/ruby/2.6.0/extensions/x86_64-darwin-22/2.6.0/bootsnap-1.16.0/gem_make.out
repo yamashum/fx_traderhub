@@ -1,0 +1,18 @@
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.16.0/ext/bootsnap
+/Users/yamamotoshunpei/.rbenv/versions/2.6.6/bin/ruby -I /Users/yamamotoshunpei/.rbenv/versions/2.6.6/lib/ruby/site_ruby/2.6.0 extconf.rb
+creating Makefile
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231017-19978-zgwcsl sitelibdir\=./.gem.20231017-19978-zgwcsl clean
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231017-19978-zgwcsl sitelibdir\=./.gem.20231017-19978-zgwcsl
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231017-19978-zgwcsl sitelibdir\=./.gem.20231017-19978-zgwcsl install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20231017-19978-zgwcsl/bootsnap
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231017-19978-zgwcsl sitelibdir\=./.gem.20231017-19978-zgwcsl clean
