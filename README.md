@@ -67,3 +67,6 @@ Figma：https://www.figma.com/file/ygEsWN3LGEv8sXJpkqv0co/FxTraderHub?type=desig
 ### 想定URL
 [こちら](https://xd.adobe.com/view/53d16b6b-bcdf-479b-4e6a-a67539af96c5-25e0/grid/)と同様にURLを記載している場合は違和感がないものになっているか？（必須ではありません）
 - [✔️] 特に記載していない or 特に違和感を感じなかった
+
+### ER図
+https://i.gyazo.com/15d1620f05412b24e8c22df344f3e7fc.png
