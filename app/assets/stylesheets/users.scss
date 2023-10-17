@@ -1,0 +1,169 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 20px;
+  
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #3498db;
+    }
+  
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  
+    .flash-message {
+      padding: 10px;
+      background-color: #f1c40f;
+      color: #fff;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+}
+  
+footer {
+    background-color: #3498db;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.hero-section {
+    height: 500px;
+    background-image: url('/assets/main.png'); /* 画像のパスを指定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+.hero-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fafafa;
+    margin: 0;
+}
+  
+.concept-section {
+    padding: 50px 0;
+}
+  
+.concept-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+  
+.concept-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin: 20px 0;
+}
+  
+.features-section {
+    display: flex;
+    gap: 20px;
+    padding: 50px 0;
+}
+  
+.feature-card {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+  
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+  
+.feature-card h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+  
+.feature-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.icon1 {
+    background-color: #007bff;
+    color: #fff;
+}
+  
+  .icon2 {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .icon3 {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+
+  header {
+    background-color: #3498db;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  a.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    margin: 0;
+    color: #fff;
+    text-decoration: none; /* リンクの下線を削除 */
+  }
+  
+  /* ナビゲーションのスタイル */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+    position: relative;
+  }
+  
+  nav ul li a {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+  
+    &:hover {
+      color: #f1c40f;
+    }
+  }

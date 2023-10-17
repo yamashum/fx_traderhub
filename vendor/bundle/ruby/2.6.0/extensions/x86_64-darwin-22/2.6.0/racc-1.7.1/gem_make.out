@@ -1,0 +1,20 @@
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/racc-1.7.1/ext/racc/cparse
+/Users/yamamotoshunpei/.rbenv/versions/2.6.6/bin/ruby -I /Users/yamamotoshunpei/.rbenv/versions/2.6.6/lib/ruby/site_ruby/2.6.0 extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231017-19978-1pvif1u sitelibdir\=./.gem.20231017-19978-1pvif1u clean
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231017-19978-1pvif1u sitelibdir\=./.gem.20231017-19978-1pvif1u
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231017-19978-1pvif1u sitelibdir\=./.gem.20231017-19978-1pvif1u install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20231017-19978-1pvif1u/racc
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231017-19978-1pvif1u sitelibdir\=./.gem.20231017-19978-1pvif1u clean
