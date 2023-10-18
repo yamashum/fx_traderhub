@@ -1,0 +1,22 @@
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.19/ext/mri
+/Users/yamamotoshunpei/.rbenv/versions/2.6.6/bin/ruby -I /Users/yamamotoshunpei/.rbenv/versions/2.6.6/lib/ruby/site_ruby/2.6.0 extconf.rb
+creating Makefile
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.19/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20231017-32123-52nbgs sitelibdir\=./.gem.20231017-32123-52nbgs clean
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.19/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20231017-32123-52nbgs sitelibdir\=./.gem.20231017-32123-52nbgs
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+clang  -D__SKIP_GNU -I/Users/yamamotoshunpei/.rbenv/versions/2.6.6/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -c -o x86.o x86.S
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.bundle
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.19/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20231017-32123-52nbgs sitelibdir\=./.gem.20231017-32123-52nbgs install
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20231017-32123-52nbgs
+
+current directory: /Users/yamamotoshunpei/fx_traderhub/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.19/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20231017-32123-52nbgs sitelibdir\=./.gem.20231017-32123-52nbgs clean

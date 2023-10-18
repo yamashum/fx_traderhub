@@ -167,3 +167,71 @@ footer {
       color: #f1c40f;
     }
   }
+
+  .container8 {
+ 
+  
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-image: url('/assets/main8.png'); /* 画像のパスを指定 */
+    background-size: cover; /* コンテナのサイズに合わせて画像を表示 */
+    
+  }
+
+  .user-registration {
+    padding: 30px;
+    background-color: #f9f6f6a7;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-registration h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-content label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .form-content input[type="text"],
+  .form-content input[type="email"],
+  .form-content input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  
+  
+  .submit-button {
+    margin-top: 20px;
+  }
+  
+  .submit-button input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .submit-button input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
