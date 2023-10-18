@@ -1,0 +1,46 @@
+<div class="container7">
+<div id="event-details" class="event-details">
+  <h2 class="event-details-heading">イベント詳細</h2>
+  <ul class="event-list">
+    <li class="event-item">
+      <h3 class="event-name">イベント名: <%= @event.name %></h3>
+      <p class="event-detail">内容: <%= @event.detail %></p>
+      <p class="event-date">日時: <%= @event.start_time.strftime('%Y/%m/%d %H:%M') %></p>
+      <p class="event-organizer">主催者: <%= @event.user.nickname %></p>
+      <% @event.tags.each do |tag| %>
+        <p class="event-tags">タグ:<%= tag.name %></p>
+      <% end %>
+
+      <% if @event.link.present? %>
+        <p class="event-link">
+          <a href="<%= @event.link %>" target="_blank">イベントリンク</a>
+        </p>
+      <% end %>
+
+     
+
+      <div class="event-actions">
+      <% if @event.user == current_user %>
+      <%= link_to '削除', event_path(@event), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+    <% end %>
+    <% if @event.user != current_user && !@event.reservations.exists?(user_id: current_user.id) %>
+        <%= link_to "予約へ", new_event_reservation_path(@event), class: 'reservation-button' %>
+        <% end %>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+<div id="chat" class="chat-container">
+  <h2 class="chat-heading">チャット</h2>
+  <div id="chat-messages" class="chat-messages">
+    <!-- チャットメッセージが表示される領域 -->
+  </div>
+
+  </div>
+  <div class="chat-input-container">
+    <input type="text" id="chat-input" class="chat-input" placeholder="メッセージを入力...">
+    <button id="chat-send" class="chat-send">送信</button>
+  </div>
+</div>

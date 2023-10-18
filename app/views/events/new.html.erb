@@ -1,0 +1,40 @@
+<div class="container4">
+    <h1 class="page-title">新規イベント投稿</h1>
+
+    <%= form_with model: @event, url: events_path, class: "event-form" do |f| %>
+      <div class="form-group">
+        <%= f.label :name, "イベント名" %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :detail, "詳細" %>
+        <%= f.text_area :detail, class: "form-control", rows: 4  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :start_time, "日時" %>
+        <%= f.datetime_select :start_time, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :link, "リンク" %>
+        <%= f.url_field :link, class: "form-control" %>
+        <small class="form-text text-muted">
+          イベントのオンライン会議リンク（例: Zoom、Teams）をこちらに追加してください。
+        </small>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :tag_list, 'Tags (複数入力の際は,で区切って下さい)' %>
+        <%= f.text_field :tag_list, class: 'form-control' %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "投稿", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+
+    <%= link_to "イベント一覧に戻る", events_path, class: "back-link" %>
+  </div>
+

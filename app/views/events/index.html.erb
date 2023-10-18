@@ -1,0 +1,51 @@
+<div class="container2">
+  <h1 class="page-title">イベント一覧</h1>
+  
+  <!-- イベント検索フォーム -->
+  <%= search_form_for @q do |f| %>
+    <div class="field">
+      <%= f.label :tags_name_cont, "タグ名で検索" %>
+      <%= f.search_field :tags_name_cont %>
+    </div>
+    <%= f.submit "検索" %>
+  <% end %>
+  
+  <% if @events.any? %>
+    <ul class="event-list">
+      <% @events.each do |event| %>
+        <li class="event-item">
+          <h2 class="event-name">イベント名:<%= event.name %></h2>
+          <p class="event-detail">内容:<%= event.detail %></p>
+          <p class="event-date">日時：<%= event.start_time.strftime('%Y/%m/%d %H:%M') %></p>
+          <p class="event-organizer">主催者：<%= event.user.nickname %></p>
+          <% event.tags.each do |tag| %>
+            <p class="event-tags">タグ:<%= tag.name %></p>
+          <% end %>
+          <!-- イベントのリンクがある場合の表示 -->
+          <% if event.link.present? %>
+            <p class="event-link">
+              <a href="<%= event.link %>" target="_blank">イベントリンク</a>
+            </p>
+          <% end %>
+          
+         
+          
+          
+
+          <p class="event-link">
+          <% if event.user == current_user %>
+  <%= link_to '削除', event_path(event), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+<% end %>
+          <%= link_to "詳細を見る", event_path(event), data: { turbolinks: false } %>
+          <% if event.user != current_user && !event.reservations.exists?(user_id: current_user.id) %>
+          <%= link_to "予約へ", new_event_reservation_path(event)%>
+          <% end %>
+    </p>
+        </li>
+      <% end %>
+    </ul>
+    <%= paginate @events%>
+  <% else %>
+    <p class="no-events">現在、イベントはありません。</p>
+  <% end %>
+</div>
