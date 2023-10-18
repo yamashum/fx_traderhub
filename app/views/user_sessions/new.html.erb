@@ -1,0 +1,33 @@
+<main>
+  <section class="login-section">
+    <div class="login-container">
+    <!-- 画像 -->
+    <div class="login-image">
+      <!-- 画像をここに配置 -->
+    </div>
+      <!-- ログインフォーム -->
+      <div class="login-form">
+        <h1>ログイン</h1>
+        <%= form_with scope: :session, url: login_path, method: :post, local: true do |f| %>
+          <div class="form-content">
+            <%= f.label :email,"メールアドレス" %>
+            <%= f.email_field :email %>
+
+            <%= f.label :password,"パスワード" %>
+            <%= f.password_field :password %>
+
+            <%= f.label :password_confirmation, 'パスワード（確認用）' %>
+            <%= f.password_field :password_confirmation %>
+
+            <div class="submit-button">
+              <%= f.submit 'ログイン' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+     
+    </div>
+  </section>
+</main>
+   
