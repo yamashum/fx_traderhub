@@ -37,6 +37,11 @@ class EventsController < ApplicationController
       session[:user_name] = current_user.nickname
     end
 
+
+    def calendar
+        @events = Event.all
+    end
+
    
 
     def destroy

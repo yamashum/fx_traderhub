@@ -1,0 +1,11 @@
+<h1>イベントカレンダー</h1>
+
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+
+  <% events.each do |event| %>
+    <div>
+      <%= link_to event.name, event_path(event), data: { turbolinks: false } %>
+    </div>
+  <% end %>
+<% end %>

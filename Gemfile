@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'bcrypt', '~> 3.1', require: 'bcrypt'
 gem 'ransack'
 gem 'kaminari'
+gem 'simple_calendar'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.5'
