@@ -11,4 +11,9 @@ Rails.application.routes.draw do
       delete 'unlike'
     end
   end
+  resources :notifications, only: [:index] do
+    member do
+      put :mark_as_read
+    end
+  end
 end

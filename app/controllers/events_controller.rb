@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 
     def index
       @q = Event.ransack(params[:q])
-      if params[:q].present? # パラメータ q が送信された場合、つまり検索が行われた場合
+      if params[:q].present? 
         @q = Event.ransack(params[:q])
         @events = @q.result.includes(:user).order(created_at: :desc).page(params[:page]).per(10) 
       else
@@ -19,11 +19,12 @@ class EventsController < ApplicationController
       @event = current_user.events.build(event_params)
     
       if @event.save
-        # イベントが保存された後、タグを処理するロジックを追加
+        
         tag_names.each do |tag_name|
           tag = Tag.find_or_create_by(name: tag_name.strip)
           @event.tags << tag
         end
+        notification = Notification.create(content: "#{current_user.nickname}が新しいイベントが作成されました", user: current_user)
         redirect_to events_path , notice: 'イベントが作成されました。'
       else
         render :new

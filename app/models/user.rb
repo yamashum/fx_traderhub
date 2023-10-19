@@ -6,6 +6,7 @@ class User < ApplicationRecord
     has_many :events, dependent: :destroy
     has_many :bulletins,  dependent: :destroy
     has_many :likes, dependent: :destroy
+    has_many :notifications,dependent: :destroy
 
     def liked_bulletins
         # ここでユーザーが「いいね」を付けた掲示板を取得するロジックを実装
