@@ -1,0 +1,51 @@
+<div class="container6">
+  <h1 class="page-title">掲示板詳細</h1>
+  <ul class="bulletin-list">
+    <li class="bulletin-item">
+      <h2 class="bulletin-title"><%= @bulletin.title %></h2>
+      <p class="bulletin-content">内容: <%= @bulletin.content %></p>
+
+      <% if @bulletin.image.attached? %>
+        <!-- 画像の表示 -->
+        <%= image_tag @bulletin.image, class: "bulletin-image" %>
+      <% else %>
+        
+      <% end %>
+
+      <!-- 属性の表示 -->
+      <% if @bulletin.new_attributes.present? %>
+        <p class="bulletin-attributes">属性: <%= @bulletin.new_attributes %></p>
+      <% end %>
+
+      <div class="like-section">
+        <!-- いいねボタン -->
+        <button class="like-button <%= current_user && current_user.liked_bulletins.include?(@bulletin) ? 'liked' : '' %>" data-bulletin-id="<%= @bulletin.id %>" onclick="likeBulletin(<%= @bulletin.id %>)">
+          <i class="fas fa-thumbs-up"></i> いいね
+        </button>
+        <span class="like-count" id="like-count-<%= @bulletin.id %>">
+          <%= @bulletin.likes.count %> いいね
+        </span>
+      </div>
+
+      <% if @bulletin.user == current_user %>
+        <%= link_to '削除', bulletin_path(@bulletin), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+      <% end %>
+    </li>
+  </ul>
+</div>
+
+<div id="chat" class="chat-container">
+  <h2 class="chat-heading">チャット</h2>
+  <div id="chat-messages" class="chat-messages">
+    <!-- チャットメッセージが表示される領域 -->
+  </div>
+</div>
+
+<div class="chat-input-container">
+  <input type="text" id="chat-input" class="chat-input" placeholder="チャットを入力...">
+  <button id="chat-send" class="chat-send">送信</button>
+</div>
+</div>
+
+
+<script src="like.js"></script>

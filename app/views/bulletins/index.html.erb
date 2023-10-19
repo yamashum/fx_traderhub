@@ -1,0 +1,58 @@
+<div class="container3">
+  <h1 class="page-title">掲示板一覧</h1>
+
+  <div class="filter-section">
+  <%= form_tag(bulletins_path, method: "get") do %>
+  <label for="attribute-filter">属性を選択:</label>
+  <select id="attribute-filter" name="attribute_id">
+    <option value="">すべて</option>
+    <% @attributes.each do |attribute| %>
+      <option value="<%= attribute %>" <%= 'selected' if attribute == @selected_attribute %>>
+        <%= attribute %>
+      </option>
+    <% end %>
+  </select>
+  <%= submit_tag("フィルタ") %>
+  <% end %>
+ </div>
+
+
+  <ul class="bulletin-list">
+    <% @bulletins.each do |bulletin| %>
+      <li class="bulletin-item">
+        <h2 class="bulletin-title"><%= bulletin.title %></h2>
+        <p class="bulletin-content">内容: <%= bulletin.content %></p>
+
+        <% if bulletin.image.attached? %>
+          <!-- 画像の表示 -->
+          <%= image_tag bulletin.image, class: "bulletin-image" %>
+        <% else %>
+          <!-- 画像が添付されていない場合の表示 -->
+        <% end %>
+
+        <!-- 属性の表示 -->
+        <% if bulletin.new_attributes.present? %>
+          <p class="bulletin-attributes">属性: <%= bulletin.new_attributes %></p>
+        <% end %>
+
+        <div class="like-section">
+          <!-- いいねボタン -->
+          <button class="like-button <%= current_user && current_user.liked_bulletins.include?(bulletin) ? 'liked' : '' %>" data-bulletin-id="<%= bulletin.id %>" onclick="likeBulletin(<%= bulletin.id %>)">
+            <i class="fas fa-thumbs-up"></i> いいね
+          </button>
+          <span class="like-count" id="like-count-<%= bulletin.id %>">
+            <%= bulletin.likes.count %> いいね
+          </span>
+        </div>
+        <%= link_to "詳細を見る", bulletin_path(bulletin), data: { turbolinks: false } %> 
+        <% if bulletin.user == current_user %>
+  <%= link_to '削除', bulletin_path(bulletin), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+<% end %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <%= link_to "新規投稿", new_bulletin_path, class: "btn btn-primary" %>
+</div>
+
+<script src="like.js"></script>

@@ -1,0 +1,33 @@
+
+<div class="container5">
+  <section class="user-registration">
+  <h1>新規掲示を投稿</h1>
+ 
+  <%= form_with model: @bulletin, local: true do |f| %>
+    <div class="form-content">
+      <%= f.label :title, "タイトル" %>
+      <%= f.text_field :title %>
+
+
+   
+      <%= f.label :content, "内容" %>
+      <%= f.text_area :content, rows: 4 %>
+   
+
+    
+      <%= f.label :new_attributes, "属性" %>
+      <%= f.select :new_attributes, ["テクニカル分析", "ファンダメンタル分析", "その他"], {} %>
+
+
+
+      <%= f.label :image, "画像" %>
+      <%= f.file_field :image %>
+
+    <div class="actions">
+      <%= f.submit "投稿", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <%= link_to "一覧に戻る", bulletins_path %>
+  </section>
+</div>
