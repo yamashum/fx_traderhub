@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="page-title">掲示を編集</h1>
+
+  <%= form_with model: @bulletin, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :title, "タイトル" %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :content, "内容" %>
+      <%= f.text_area :content, class: "form-control" %>
+    </div>
+
+    <!-- 他の掲示内容のフォームを追加 -->
+
+    <div class="actions">
+      <%= f.submit "更新", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <%= link_to "詳細に戻る", @bulletin, class: "btn btn-secondary" %>
+</div>
