@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
   resources :users
-  resources :events
+  resources :events do
+    get 'calendar', on: :collection
+  end
   resources :bulletins do
     member do
       post 'like'
