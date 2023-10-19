@@ -1,0 +1,28 @@
+<h1>通知一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>通知内容</th>
+      <th>作成日時</th>
+      <th>ステータス</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @notifications.each do |notification| %>
+      <tr>
+        <td><%= notification.content %></td>
+        <td><%= notification.created_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
+        <td><%= notification.read ? '既読' : '未読' %></td>
+        <td>
+          <% unless notification.read %>
+            <%= link_to '既読にする', mark_as_read_notification_path(notification), method: :put, data: { confirm: 'この通知を既読にしますか？' } %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'ホームに戻る', root_path %>
