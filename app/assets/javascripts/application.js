@@ -16,3 +16,15 @@
 //= require turbolinks
 //= require activestorage
 //= require_tree .
+
+$(document).ready(function() {
+    // イベントのリンクにカーソルを合わせたときにドロップダウンメニューを表示する
+    $('.dropdown').hover(
+      function() {
+        $(this).find('.dropdown-content').fadeIn(200);
+      },
+      function() {
+        $(this).find('.dropdown-content').fadeOut(200);
+      }
+    );
+  });

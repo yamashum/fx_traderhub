@@ -28,14 +28,10 @@
             </p>
           <% end %>
           
-         
-          
-          
-
           <p class="event-link">
-          <% if event.user == current_user %>
-  <%= link_to '削除', event_path(event), method: :delete, data: { confirm: '本当に削除しますか？' } %>
-<% end %>
+           <% if event.user == current_user %>
+              <%= link_to '削除', event_path(event), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+           <% end %>
           <%= link_to "詳細を見る", event_path(event), data: { turbolinks: false } %>
           <% if event.user != current_user && !event.reservations.exists?(user_id: current_user.id) %>
           <%= link_to "予約へ", new_event_reservation_path(event)%>
