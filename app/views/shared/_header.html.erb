@@ -2,11 +2,47 @@
 <a class="logo" href="<%= root_path %>">FXTradeHub</a>
   <nav>
     <ul>
-        <li><%= link_to 'イベント一覧', '#' %></li>
+      <% if current_user %>
+      
+        <li class="dropdown">
+          <span style="color: white;">掲示板</span>
+          <div class="dropdown-content">
+            <%= link_to '掲示板一覧', bulletins_path %>
+            <%= link_to '掲示板作成', new_bulletin_path %>
+          </div>
+        </li>
+        <li class="dropdown">
+          <span style="color: white;">イベント</span>
+          <div class="dropdown-content">
+            <%= link_to 'イベント一覧', events_path %>
+            <%= link_to 'イベント作成', new_event_path %>
+          </div>
+        </li>
+        <li><%= link_to 'カレンダー', calendar_events_path %></li>
+        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+        <li>
+          <span class="notification-icon">
+            <%= link_to user_notifications_path do %>
+              <i class="fa-solid fa-bell"></i>
+            <% end %>
+          </span>
+        </li>
+        <li>
+          <% if current_user.icon_image.attached? %>
+            <%= link_to edit_user_path(current_user) do %>
+              <%= image_tag rails_blob_path(current_user.icon_image, only_path: true), class: "user-icon" %>
+            <% end %>
+          <% else %>
+            <%= link_to edit_user_path(current_user) do %>
+              <i class="fa-solid fa-user fa-xl"></i>
+            <% end %>
+          <% end %>
+        </li>
+      <% else %>
+        
         <li><%= link_to 'ログイン', login_path %></li>
         <li><%= link_to 'ユーザー登録', new_user_path %></li>
-        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
-      
+      <% end %>
     </ul>
   </nav>
 </header>

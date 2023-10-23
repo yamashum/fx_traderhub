@@ -1,0 +1,6 @@
+<h1>イベント予約</h1>
+
+<%= form_for [@event, @reservation], url: event_reservations_path do |f| %>
+  <%= f.hidden_field :event_id %>
+  <%= f.submit '予約する' %>
+<% end %>
