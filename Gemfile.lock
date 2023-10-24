@@ -80,8 +80,11 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.2.2)
+    connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.3)
+    dockerfile-rails (1.5.12)
+      rails (>= 3.0.0)
     erubi (1.12.0)
     execjs (2.9.1)
     ffi (1.16.3)
@@ -142,6 +145,8 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.10-x86_64-linux)
+      racc (~> 1.4)
     pg (1.5.4)
     popper_js (1.16.1)
     public_suffix (5.0.3)
@@ -183,6 +188,10 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (5.0.8)
+      redis-client (>= 0.17.0)
+    redis-client (0.17.1)
+      connection_pool
     regexp_parser (2.8.2)
     rexml (3.2.6)
     ruby_dep (1.5.0)
@@ -210,6 +219,11 @@ GEM
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
+    sentry-rails (5.12.0)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.12.0)
+    sentry-ruby (5.12.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
     simple_calendar (2.4.3)
       rails (>= 3.0)
     spring (2.1.1)
@@ -249,6 +263,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   bcrypt (~> 3.1)
@@ -258,6 +273,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dockerfile-rails (>= 1.5)
   font-awesome-sass (~> 5.11.2)
   jbuilder (~> 2.5)
   jquery-rails
@@ -267,8 +283,11 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.5)
   ransack
+  redis (~> 5.0)
   sass-rails (~> 5.0)
   selenium-webdriver
+  sentry-rails (~> 5.12)
+  sentry-ruby (~> 5.12)
   simple_calendar
   spring
   spring-watcher-listen (~> 2.0.0)
