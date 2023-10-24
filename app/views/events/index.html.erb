@@ -21,7 +21,7 @@
           <% event.tags.each do |tag| %>
             <p class="event-tags">タグ:<%= tag.name %></p>
           <% end %>
-          <!-- イベントのリンクがある場合の表示 -->
+          <%if current_user%>
           <% if event.link.present? %>
             <p class="event-link">
               <a href="<%= event.link %>" target="_blank">イベントリンク</a>
@@ -35,6 +35,7 @@
           <%= link_to "詳細を見る", event_path(event), data: { turbolinks: false } %>
           <% if event.user != current_user && !event.reservations.exists?(user_id: current_user.id) %>
           <%= link_to "予約へ", new_event_reservation_path(event)%>
+          <% end %>
           <% end %>
     </p>
         </li>
