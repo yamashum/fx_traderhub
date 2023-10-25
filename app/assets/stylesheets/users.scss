@@ -17,7 +17,7 @@ body {
   }
   .container2 {
    
-    background-image: url('/assets/main2.png'); /* 画像のパスを指定 */
+    background-image: image-url('main2.png'); /* 画像のパスを指定 */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -28,7 +28,7 @@ body {
   
   .container3 {
    
-    background-image: url('/assets/main3.png'); /* 画像のパスを指定 */
+    background-image: image-url('main3.png'); /* 画像のパスを指定 */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -39,7 +39,7 @@ body {
   
   .container4 {
    
-    background-image: url('/assets/main4.png'); /* 画像のパスを指定 */
+    background-image: image-url('main4.png'); /* 画像のパスを指定 */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -50,7 +50,7 @@ body {
   
   .container5 {
    
-    background-image: url('/assets/main5.png'); /* 画像のパスを指定 */
+    background-image: image-url('main5.png'); /* 画像のパスを指定 */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -62,7 +62,7 @@ body {
   
   .container6 {
    
-    background-image: url('/assets/main6.png'); /* 画像のパスを指定 */
+    background-image: image-url('main6.png'); /* 画像のパスを指定 */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -81,7 +81,7 @@ body {
   
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    background-image: url('/assets/main7.png'); /* 画像のパスを指定 */
+    background-image: image-url('main7.png'); /* 画像のパスを指定 */
     background-size: cover; /* コンテナのサイズに合わせて画像を表示 */
     
   }
@@ -95,7 +95,7 @@ body {
   
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    background-image: url('/assets/main8.png'); /* 画像のパスを指定 */
+    background-image: image-url('main8.png'); /* 画像のパスを指定 */
     background-size: cover; /* コンテナのサイズに合わせて画像を表示 */
     
   }
@@ -109,7 +109,7 @@ body {
   
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    background-image: url('/assets/main9.png'); /* 画像のパスを指定 */
+    background-image: image-url('main9.png'); /* 画像のパスを指定 */
     background-size: cover; /* コンテナのサイズに合わせて画像を表示 */
     
   }
@@ -165,7 +165,7 @@ body {
   
   .hero-section {
     height: 500px;
-    background-image: url('/assets/main.png'); /* 画像のパスを指定 */
+    background-image: image-url('main.png'); /* 画像のパスを指定 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -611,7 +611,7 @@ body {
   /* 画像コンテナ */
   .login-image {
     flex: 2; /* ログインフォームと比べて2倍の幅を持つ */
-    background-image: url('/assets/v42_1297.png'); /* 画像のパスを指定 */
+    background-image: image-url('v42_1297.png'); /* 画像のパスを指定 */
     background-size: cover;
     background-position: center;
   }
