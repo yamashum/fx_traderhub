@@ -53,15 +53,15 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'sqlite3'
   gem 'web-console', '>= 3.3.0'
-  gem "sqlite3"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :production do
-  gem "pg"
+  gem 'pg'
 end
 
 group :test do
@@ -75,10 +75,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem "dockerfile-rails", ">= 1.5", :group => :development
+gem 'dockerfile-rails', '>= 1.5', group: :development
 
-gem "redis", "~> 5.0"
+gem 'redis', '~> 5.0'
 
-gem "sentry-ruby", "~> 5.12"
+gem 'sentry-ruby', '~> 5.12'
 
-gem "sentry-rails", "~> 5.12"
+gem 'sentry-rails', '~> 5.12'
