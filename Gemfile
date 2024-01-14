@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby '3.0.0'
 gem 'bcrypt', '~> 3.1', require: 'bcrypt'
 gem 'bootstrap', '~> 4.3.1'
 gem 'font-awesome-sass', '~> 5.11.2'
@@ -11,9 +11,14 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'ransack'
 gem 'simple_calendar'
+gem 'aws-sdk-s3', require: false
+gem 'image_processing', '~> 1.2'
+gem "google-cloud-storage", "~> 1.3", require: false
+gem 'cloudinary', require: true  
+gem 'activestorage-cloudinary-service'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.5'
+gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
 
 # Use Puma as the app server

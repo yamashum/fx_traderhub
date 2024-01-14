@@ -6,20 +6,26 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
+production:
+  service: Cloudinary
+  cloud_name: <%= Rails.application.credentials.dig(:cloudinary, :cloud_name) %>
+  api_key:    <%= Rails.application.credentials.dig(:cloudinary, :api_key) %>
+  api_secret: <%= Rails.application.credentials.dig(:cloudinary, :api_secret) %>
+
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
-# amazon:
-#   service: S3
-#   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
-#   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
-#   region: us-east-1
-#   bucket: your_own_bucket
+#amazon:
+  #service: S3
+  #access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
+  #secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
+  #region: 'ap-northeast-3'
+  #bucket: 'fx-tradehub'
 
 # Remember not to checkin your GCS keyfile to a repository
-# google:
-#   service: GCS
-#   project: your_project
-#   credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
-#   bucket: your_own_bucket
+ #google:
+  # service: GCS
+   #project:  "fast-audio-411105"
+   #credentials: <%= Rails.root.join("config/fast-audio-411105-672807ec40eb.json") %>
+   #bucket: 'fx-tradehub'
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
@@ -32,3 +38,9 @@ local:
 #   service: Mirror
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
+
+cloudinary:
+  service: Cloudinary
+  cloud_name: <%= Rails.application.credentials.dig(:cloudinary, :cloud_name) %>
+  api_key:    <%= Rails.application.credentials.dig(:cloudinary, :api_key) %>
+  api_secret: <%= Rails.application.credentials.dig(:cloudinary, :api_secret) %>
