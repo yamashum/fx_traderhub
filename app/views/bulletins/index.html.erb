@@ -22,8 +22,9 @@
       <li class="bulletin-item">
         <h2 class="bulletin-title"><%= bulletin.title %></h2>
         <p class="bulletin-content">内容: <%= bulletin.content %></p>
-
+          
         <% if bulletin.image.attached? %>
+        
           <!-- 画像の表示 -->
           <%= image_tag bulletin.image, class: "bulletin-image" %>
         <% else %>
