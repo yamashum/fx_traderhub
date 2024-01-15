@@ -16,6 +16,8 @@ gem 'image_processing', '~> 1.2'
 gem "google-cloud-storage", "~> 1.3", require: false
 gem 'cloudinary', require: true  
 gem 'activestorage-cloudinary-service'
+gem 'line-bot-api'
+gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'

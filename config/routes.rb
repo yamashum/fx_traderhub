@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   root 'static_pages#top'
+  post '/callback', to: 'line_webhook#callback'
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
