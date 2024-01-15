@@ -813,5 +813,19 @@ body {
       margin-left: 10px;
     }
   }
+
+  .line-qr-section {
+    text-align: center; /* センター寄せ */
+    padding: 20px; /* 余白の追加 */
+  }
+  
+  .line-qr-image {
+    max-width: 150px; /* QRコードの最大幅 */
+  }
+  
+  .line-qr-description {
+    font-size: 16px; /* 文字サイズ */
+    color: #ffffff; /* 文字色 */
+  }
   
   
