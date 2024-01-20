@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :bulletins,  dependent: :destroy
   has_many :notifications, dependent: :destroy
-  has_many :chat_messages
+  has_many :chat_messages, dependent: :destroy
   has_many :bulletin_chats, dependent: :destroy
   has_one_attached :icon_image
 
